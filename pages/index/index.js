@@ -10,6 +10,8 @@ Page({
     bookList: [],
     creatingBookName: '', // 当前正在创建的书名
     editingBookName: '', // 当前正在编辑的书名
+    creatingBookAuthor: '', // 当前正在创建的作者
+    editingBookAuthor: '', // 当前正在编辑的作者
   },
 
   onLoad(options) {
@@ -41,12 +43,21 @@ Page({
     })
   },
 
-  // 绑定添加书目的输入框事件，设置添加的数目名称
+  // 绑定添加书目的输入框事件，设置添加的书目名称
   bindCreateBookNameInput(e) {
     let that = this
     let value = e.detail.value
     this.setData({
       creatingBookName: value
+    })
+
+  },
+  // 绑定添加书目作者信息的输入框事件，设置添加的书籍作者
+  bindCreateBookAuthorInput(e) {
+    let that = this
+    let value = e.detail.value
+    this.setData({
+      creatingBookAuthor: value
     })
 
   },
@@ -85,6 +96,14 @@ Page({
     let bookName = e.detail.value
     this.setData({
       editingBookName: bookName,
+    })
+  },
+
+  // 绑定每一行书目作者的输入框事件，设定当前正在编辑的作者
+  bindEditBookAuthorInput(e) {
+    let bookAuthor = e.detail.value
+    this.setData({
+      editingBookAuthor: bookAuthor,
     })
   },
 

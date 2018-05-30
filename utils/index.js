@@ -14,10 +14,12 @@ let addBook = (ctx, cb) => {
   let tableId = getApp().globalData.indexBookTableId,
     Books = new wx.BaaS.TableObject(tableId),
     Book = Books.create(),
-    bookName = ctx.data.creatingBookName
+    bookName = ctx.data.creatingBookName,
+    bookAuthor = ctx.data.creatingBookAuthor
 
   let data = {
-    bookName
+    bookName,
+    bookAuthor
   }
 
   Book.set(data)
@@ -31,12 +33,15 @@ let updateBook = (ctx, cb) => {
   let tableId = getApp().globalData.indexBookTableId,
     recordId = ctx.data.curRecordId,
     bookName = ctx.data.editingBookName
+    bookAuthor = ctx.data.editingBookAuthor
 
   let Books = new wx.BaaS.TableObject(tableId),
     Book = Books.getWithoutData(recordId)
 
+    //注意数据格式
   let data = {
-    bookName
+    bookName,
+    bookAuthor
   }
 
   Book.set(data)
