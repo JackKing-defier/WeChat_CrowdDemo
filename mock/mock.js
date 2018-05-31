@@ -11,14 +11,17 @@ module.exports = {
       "created_at": 1487053095,
       "id": "5984465311a55f59b38ea909",
       "bookName": "傲慢与偏见",
+      "bookAuthor": "傲慢与偏见",
     }, {
       "created_at": 1487053110,
       "id": "5984465311a55f59b38ea90b",
       "bookName": "双城记",
+      "bookAuthor": "傲慢与偏见",
     }, {
       "created_at": 1487053110,
       "id": "5984465311a55f59b38ea90f",
       "bookName": "黑客与画家",
+      "bookAuthor": "傲慢与偏见",
     }]
   }
 }

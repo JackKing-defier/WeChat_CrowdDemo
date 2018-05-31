@@ -18,8 +18,8 @@ let addBook = (ctx, cb) => {
     bookAuthor = ctx.data.creatingBookAuthor
 
   let data = {
-    bookName,
-    bookAuthor
+    'bookName': bookName,
+    'bookAuthor': bookAuthor,
   }
 
   Book.set(data)
@@ -32,16 +32,16 @@ let addBook = (ctx, cb) => {
 let updateBook = (ctx, cb) => {
   let tableId = getApp().globalData.indexBookTableId,
     recordId = ctx.data.curRecordId,
-    bookName = ctx.data.editingBookName
+    bookName = ctx.data.editingBookName,
     bookAuthor = ctx.data.editingBookAuthor
 
   let Books = new wx.BaaS.TableObject(tableId),
     Book = Books.getWithoutData(recordId)
 
-    //注意数据格式
+  //注意数据格式
   let data = {
-    bookName,
-    bookAuthor
+    'bookName': bookName,
+    'bookAuthor': bookAuthor,
   }
 
   Book.set(data)

@@ -18,6 +18,8 @@
         </view>
         <view class="index-books__controls--edit-area" wx:else>
           <input type="text" value="{{ item.bookName }}" confirm-type="完成" data-book-id="{{ item.id }}" bindinput="bindEditBookNameInput" />
+        <!-- </view>
+        <view class="index-books__controls--edit-area"> -->
           <input type="text" value="{{ item.bookAuthor }}" confirm-type="完成" data-book-id="{{ item.id }}" bindinput="bindEditBookAuthorInput" />
         </view>
         
