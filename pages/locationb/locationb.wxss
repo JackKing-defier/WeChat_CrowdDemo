@@ -1,1 +1,172 @@
 /* pages/locationb/locationb.wxss */
+.dw {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 100%; }
+
+.wxSortPickerViewTag {
+  background-color: #f1f1f1;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #999999;
+  line-height: 30px;
+  padding: 0 15px; }
+
+.wxSortPickerViewItem {
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #eee;
+  margin-left: 15px;
+  color: #444; }
+
+.hor {
+  font-size: 0.8rem;
+  color: #999999;
+  font-weight: 500;
+  display: block;
+  padding: 14px 25px 5px 0px; }
+
+.kuai {
+  height: 30px;
+  width: 28%;
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 30px;
+  font-weight: 500;
+  display: inline-block;
+  margin: 10px 10px 0 0;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 2px; }
+
+.searchLetter {
+  position: fixed;
+  right: 0;
+  width: 20px;
+  height: 80%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 1; }
+
+.searchLetter view {
+  height: 70rpx;
+  font-size: 0.80rem;
+   }
+
+.touchClass {
+  top: 50px;
+  margin-top: 35px;
+  right: 0;
+  background-color: #fff;
+  color:#0098e8;
+  font-weight: 700; }
+
+.showSlectedLetter {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin: -50px;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  font-size: 26px;
+  z-index: 1; }
+
+.selection {
+  display: flex;
+  width: 100%;
+  flex-direction: column; }
+
+.item_letter {
+  display: flex;
+  font-size: 0.8rem;
+  background-color: #f8f8f8;
+  height: 30px;
+  padding-left: 10px;
+  align-items: center; }
+
+.item_city {
+  display: flex;
+  font-size: 0.75rem;
+  background-color: #fff;
+  height: 40px;
+  padding-left: 10px;
+  align-items: center;
+  border-bottom: 1px solid #f8f8f8; }
+
+.gps {
+  position: relative;
+  height: 38px;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  line-height: 38px;
+  padding-left: 15px;
+  font-size: 0.75rem; }
+
+.gpsif {
+  font-size:0.75rem;
+  color: #ccc; }
+button::after{
+  border:none!important;
+}
+.search_top{
+  width:100%;
+  padding: 0 3%;
+  height:93.6rpx;
+  line-height: 65rpx;
+  padding-top: 23.4rpx;
+}
+.searh_input{
+  position: relative;
+  width: 90%;
+}
+.icon-sousuo{
+  width: 35rpx;
+  height: 35rpx;
+  text-align: center;
+  line-height: 35rpx;
+  position: absolute;
+  font-size: 30rpx;
+  z-index: 9;
+  top: 18rpx;
+ background: #f2f2f2;
+ left: 23%;
+  border:none!important;
+}
+.search_top input{
+   float: left;
+   width: 100%;
+   background: #f2f2f2;
+   height: 70.2rpx;
+   border-radius: 46.8rpx;
+   padding-left: 5%;
+   text-align: center
+}
+.search_top i{
+  font-size: 50rpx;
+  float: right
+}
+.qg{
+  height:30px;
+width:28%;
+font-size:0.75rem;
+text-align:center;
+line-height:30px;
+font-weight:500;
+display:inline-block;
+margin:10px 10px 0 0;
+background:#fff;
+border:1px solid #0098e8;
+border-radius:2px;
+margin-left: 3%;
+color: #0098e8;
+}

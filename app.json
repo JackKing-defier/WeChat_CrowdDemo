@@ -48,7 +48,9 @@
     "pages/agreement/agreement",
     "pages/cost/cost",
     "pages/locationb/locationb",
-    "pages/huchi/huchi"
+    "pages/huchi/huchi",
+    
+    "pages/book/book"
   ],
   "window": {
     "backgroundTextStyle": "dark",

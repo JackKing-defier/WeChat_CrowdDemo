@@ -1,2 +1,9 @@
 <!--pages/agreement/agreement.wxml-->
-<text>pages/agreement/agreement.wxml</text>
+<!-- <import src="../../wxParse/wxParse.wxml" />
+<view class="agreement">{{article.protocol_title}}</view>
+<view class="list">
+    <view class="list_li_box">
+        <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+    </view>
+</view> -->
+<text>一些协议内容：欢迎加入普适计算研究所项目进行数据采集。</text>

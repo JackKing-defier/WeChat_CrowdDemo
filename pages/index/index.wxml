@@ -1,42 +1,96 @@
-<!-- index.wxml -->
-<view class="index">
-  <button open-type="getUserInfo" bindgetuserinfo="userInfoHandler">用户授权</button>
-  <view class="index-profile">
-    <view wx:if="{{ profile.avatarUrl }}" class="index-profile__img" style="background-image: url('{{profile.avatarUrl}}')"></view>
-    <view wx:else class="index-profile__img-hold">暂无头像</view>
-  </view>
-  <view class="index-title">{{ title }}</view>
-  <view class="index-books">
-    <view class="index-books__showLayer">
-      <view class="index-books__item" wx:for="{{ bookList }}" wx:key="{{ index }}">
-        <view class="index-books__title">书目：</view>
-        <view class="index-books__controls--show" wx:if="{{ !item.isEditing }}">
-          {{ item.bookName }}
-        </view>
-        <view class="index-books__controls--show" wx:if="{{ !item.isEditing }}">
-          {{ item.bookAuthor }}
-        </view>
-        <view class="index-books__controls--edit-area" wx:else>
-          <input type="text" value="{{ item.bookName }}" confirm-type="完成" data-book-id="{{ item.id }}" bindinput="bindEditBookNameInput" />
-        <!-- </view>
-        <view class="index-books__controls--edit-area"> -->
-          <input type="text" value="{{ item.bookAuthor }}" confirm-type="完成" data-book-id="{{ item.id }}" bindinput="bindEditBookAuthorInput" />
-        </view>
-        
-        <button class="index-books__controls--edit-btn btn" type="primary" data-book-id="{{ item.id }}" data-index="{{index}}" bindtap="{{ item.isEditing ? 'updateBook' : 'editBookButtonClicked' }}">
-          {{ item.isEditing ? '保存' : '编辑' }}
-        </button>
-        <button class="index-books__controls--delete btn" type="warn" data-book-id="{{ item.id }}" bindtap="deleteBook">
-          删除
-        </button>
-      </view>
+<!--pages/index/index.wxml-->
+<!-- 头部 -->
+<view class="top">
+    <view class="top_left" bindtap="onLocation">
+        {{areaInfo}}
+        <i class="icon iconfont icon-xiala"></i>
     </view>
-    <view class="index-books__input">
-      <input type="text" placeholder="我的床头书" value="{{ createBookValue }}" confirm-type="完成" bindinput="bindCreateBookNameInput" />
-      <input type="text" placeholder="图书作者" value="{{ createBookAuthor }}" confirm-type="完成" bindinput="bindCreateBookAuthorInput" />
+    <view class="top_right">
+        <navigator url="/pages/search/search">
+            <view>搜索感兴趣的活动</view>
+            <i class="icon iconfont icon-sousuo"></i>
+        </navigator>
     </view>
-    <view class="index-books__controls">
-      <button class="index-books__controls--create" bindtap="createBook" type="primary">添加</button>
+</view>
+<!-- 头部  end -->
+<!-- 弹窗 -->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="list_t">
+        <view class="{{quanbu ? 'current':''}}" data-id="0" bindtap="onSectionClicked">全部</view>
+        <view class="{{item.active ? 'current':''}}" wx:for="{{sections}}" wx:key="{{this}}" data-id="{{item.id}}" bindtap="onSectionClicked">
+            {{item.c_title}}
+        </view>
     </view>
-  </view>
+    <view class="modal-footer">
+        <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    </view>
+</view>
+<!-- 弹窗 end -->
+<view>
+    <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+        <view class="add" bindtap="showDialogBtn">+</view>
+        <view class="tab-item {{quanbu ? 'active':''}}" data-id="0" bindtap="onSectionClicked">
+            全部
+        </view>
+        <view class="tab-item {{item.active ? 'active':''}}" wx:for="{{sections}}" wx:key="{{this}}" data-id="{{item.id}}" bindtap="onSectionClicked">
+            {{item.c_title}}
+        </view>
+    </scroll-view>
+    <!-- <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
+    style="height:{{winHeight}}rpx"> -->
+    <!-- <swiper-item wx:for="{{[0,1,2,3,4,5,6,7]}}"> -->
+    <!-- <scroll-view scroll-y="true" class="scoll-h" > -->
+    <!-- <block wx:for="{{[1]}}" wx:key="*this"> -->
+    <!-- 轮播图 -->
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:key="{{this}}">
+            <swiper-item>
+                <image bindtap="onArticleClick" mode="aspectFill" data-aid="{{item.aid}}" src="{{item.banner_thumb}}" class="slide-image" width="355" height="150" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- 轮播图 end -->
+    <!-- 活动 -->
+    <ul class="activity">
+        <li>
+            <view class="section section_gap list_li" wx:for="{{articles}}" wx:key="{{this}}" bindtap="onArticleClick" data-aid="{{item.id}}">
+                <view class="activity_tit">
+                    <view class="activity_img">
+                        <image src="{{item.avatarUrl}}"></image>
+                        {{item.nickName}}
+                        <i class="icon iconfont icon-renzheng"></i>
+                    </view>
+                </view>
+                <view class="activity_info_img">
+                    <image src="{{item.activity_poster}}" mode="aspectFill"></image>
+                </view>
+                <view class="activity_info_tit">
+                    <text class="activity_h2">
+                        {{item.activity_title}}
+                        <text>￥{{item.activity_cost}}</text>
+                    </text>
+                    <view class="actvity_con">
+                        <view class="conduct conduct1 conduct2">
+                            <text>{{item.activity_starttime}}开始</text>
+                            <text style="float:right; color: #0098e8!important;">
+                                {{item.tagname}}
+                            </text>
+                        </view>
+                        <text class="conduct">
+                            <text class="conduct-ad">地点：{{item.activity_address}}</text>
+                        </text>
+                    </view>
+                </view>
+            </view>
+            <view class="nomore" wx:if="{{noMoreDataList}}">
+                <text>加载完成</text>
+            </view>
+        </li>
+    </ul>
+    <!-- 活动  end -->
+    <!-- </block> -->
+    <!-- </scroll-view> -->
+    <!-- </swiper-item>
+  </swiper> -->
 </view>

@@ -10,3 +10,73 @@ view,
 input {
   box-sizing: border-box;
 }
+
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+page{
+  font-size: 30rpx;
+  font-family: "微软雅黑";
+  color: #2b2b2b;
+}
+input{
+   font-family: "微软雅黑";
+}
+/*icon  */
+@font-face {
+  font-family: 'iconfont';  /* project id 407426 */
+  src: url('http://at.alicdn.com/t/font_407426_9jj2sy4l0971fw29.eot');
+  src: url('http://at.alicdn.com/t/font_407426_9jj2sy4l0971fw29.eot?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_407426_9jj2sy4l0971fw29.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_407426_9jj2sy4l0971fw29.ttf') format('truetype'),
+  url('http://at.alicdn.com/t/font_407426_9jj2sy4l0971fw29.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-booming:before { content: "\e60f"; }
+
+.icon-baoming:before { content: "\e61b"; }
+
+.icon-quanbudingdan:before { content: "\e607"; }
+
+.icon-xiala:before { content: "\e647"; }
+
+.icon-huodong:before { content: "\e64e"; }
+
+.icon-5:before { content: "\e709"; }
+
+.icon-shoucang1:before { content: "\e606"; }
+
+.icon-gengduo:before { content: "\e60c"; }
+
+.icon-shourutubiao-01:before { content: "\e718"; }
+
+.icon-sousuo:before { content: "\e660"; }
+
+.icon-guanzhu:before { content: "\e64d"; }
+
+.icon-shoucang:before { content: "\e65c"; }
+
+.icon-huwai:before { content: "\e626"; }
+
+.icon-renzheng:before { content: "\e600"; }
+
+.icon-xiugai:before { content: "\e611"; }
+
+.icon-saoma:before { content: "\e814"; }
+
+.icon-zhaopian-icon:before { content: "\e610"; }
+

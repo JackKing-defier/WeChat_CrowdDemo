@@ -1,1 +1,31 @@
 /* pages/agreement/agreement.wxss */
+.agreement{
+  width: 94%;
+  float: left;
+  padding: 5% 3%;
+  text-indent: 2em;
+  line-height: 40rpx;
+  overflow: hidden
+}
+.list{
+  width: 94%;
+  float: left;
+  padding: 0 3%;
+  
+  overflow: hidden
+}
+.list_li_tit{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.list_li{
+  padding: 23.4rpx 0;
+  width: 100%;
+  float: left;
+  text-indent: 2em;
+  line-height: 40rpx;
+}
+.list_li_box{
+  width: 100%;
+  float: left
+}

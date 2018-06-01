@@ -1,1 +1,293 @@
 /* pages/release/release.wxss */
+
+.release_list {
+  padding: 0 3%;
+  width: 94%;
+  float: left;
+  overflow: hidden;
+}
+
+.release_list li {
+  width: 100%;
+  float: left;
+  position: relative;
+  padding: 23.4rpx 0;
+  border-bottom: 2.34rpx solid #ebebeb;
+}
+
+.release_list li navigator {
+  height: 30px;
+}
+
+.li-text {
+  width: 33.333333333%;
+  float: left;
+  position: relative;
+}
+
+.li-text text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  width: 40rpx;
+  height: 40rpx;
+  line-height: 38rpx;
+  text-align: center;
+  font-size: 40rpx;
+  background: #0098e8 !important;
+  border-radius: 50%;
+}
+
+.li_but {
+  margin: 46.8rpx 0;
+  float: left;
+  width: 100%;
+  height: 93.6rpx;
+  line-height: 93.6rpx;
+  background: #0098e8 !important;
+  color: #fff;
+}
+
+.release_list li textarea {
+  width: 100%;
+  height: 200rpx;
+}
+
+.li_name {
+  width: 22%;
+  padding-top: 7rpx;
+  float: left;
+}
+
+.li_input i {
+  position: absolute;
+  right: 0;
+  margin-top: -18px;
+  top: 50%;
+}
+
+.li_name1 {
+  padding: 0;
+  line-height: 70.2rpx;
+}
+
+.li_input {
+  width: 78%;
+  float: left;
+  line-height: 70.2rpx;
+  color: #898989;
+}
+
+.li_input4 picker {
+  width: 40%;
+  float: left;
+}
+
+.li_input5 {
+  width: 30%;
+  float: left;
+}
+
+.picker5 {
+  line-height: 70.2rpx;
+  color: #898989;
+  height: 70.2rpx;
+}
+
+.li_name6 {
+  line-height: 140.4rpx;
+}
+
+.li_input1 {
+  width: 61%;
+}
+
+.li_input1 input {
+  padding-top: 5.34rpx;
+  height: 70.2rpx;
+}
+
+.li_input1 image {
+  width: 140.4rpx !important;
+  height: 140.4rpx;
+}
+
+.li_input6 {
+  line-height: 10rpx;
+}
+
+.li_add_img {
+  width: 15%;
+  float: right;
+  text-align: right;
+  line-height: 140.4rpx;
+  border-left: 2.34rpx solid #ebebeb;
+}
+
+.li_add_img i {
+  font-size: 60rpx;
+  color: #0098e8;
+}
+
+.li_input2 picker {
+  padding-top: 7rpx;
+  width: 23%;
+  font-size: 25rpx;
+  color: #898989;
+  float: left;
+  text-align: center;
+}
+
+ .li_input2 text {
+  width: 4%;
+  padding-top: 7rpx;
+  float: left; 
+  margin: 0 0.5%;
+  color: #2b2b2b;
+  display: inline-block;
+} 
+
+.li_input3 picker {
+  width: 100%;
+  line-height: 58.2rpx;
+}
+
+.flow {
+  float: left;
+  width: 100%;
+}
+
+.form-group {
+  float: right;
+}
+
+/*button*/
+
+.btn {
+  width: 80%;
+  padding: 20rpx 0;
+  border-radius: 10rpx;
+  text-align: center;
+  margin: 40rpx 10%;
+  background: #000;
+  color: #fff;
+}
+
+/*mask*/
+
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+/*content*/
+
+.drawer_box {
+  width: 650rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 1001;
+  background: #fafafa;
+  margin: -150px 50rpx 0 50rpx;
+  border-radius: 3px;
+}
+
+.drawer_title {
+  padding: 15px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+}
+
+.drawer_content {
+  overflow-y: scroll; /*超出父盒子高度可滚动*/
+  padding: 0 5% 5% 5%;
+  line-height: 40rpx;
+}
+
+.btn_ok {
+  padding: 10px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+  border-top: 1px solid #e8e8ea;
+  color: #3cc51f;
+}
+
+.top {
+  padding-top: 8px;
+}
+
+.bottom {
+  padding-bottom: 8px;
+}
+
+.title {
+  height: 30px;
+  line-height: 30px;
+  width: 160rpx;
+  text-align: center;
+  display: inline-block;
+  font: 300 28rpx/30px "microsoft yahei";
+}
+
+.input_base {
+  border: 2rpx solid #ccc;
+  padding-left: 10rpx;
+  margin-right: 50rpx;
+}
+
+.input_h30 {
+  height: 30px;
+  line-height: 30px;
+}
+
+.input_h60 {
+  height: 60px;
+}
+
+.input_view {
+  background: #fff;
+  color: #000;
+  line-height: 30px;
+}
+
+input {
+  background: #fff;
+  color: #000;
+}
+
+radio {
+  margin-right: 10rpx;
+}
+
+.grid {
+  display: -webkit-box;
+  display: box;
+}
+
+/* .col-0 {
+  -webkit-box-flex: 0;
+  box-flex: 0;
+}
+
+.col-1 {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+} */
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
