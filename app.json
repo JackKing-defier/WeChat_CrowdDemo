@@ -1,11 +1,96 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/item/item",
+    "pages/release/release",
+    "pages/search/search",
+    "pages/order/order",
+    "pages/z-data/z-data",
+    "pages/g-data/g-data",
+    "pages/order-details/order-details",
+    "pages/location/location",
+    "pages/z_center/z_center",
+    "pages/z_record/z_record",
+    "pages/center/center",
+    "pages/activity/activity",
+    "pages/sign_up/sign_up",
+    "pages/sign_up_details/sign_up_details",
+    "pages/code/code",
+    "pages/order1/order",
+    "pages/q-authentication/q-authentication",
+    "pages/z-authentication/z-authentication",
+    "pages/rz_type/rz_type",
+    "pages/g-authentication/g-authentication",
+    "pages/help/help",
+    "pages/help-detalis/help-detalis",
+    "pages/income/income",
+    "pages/t_record/t_record",
+    "pages/withdrawals/withdrawals",
+    "pages/address/address",
+    "pages/authentication/authentication",
+    "pages/contact/contact",
+    "pages/brief/brief",
+    "pages/modify/modify",
+    "pages/personal/personal",
+    "pages/follow/follow",
+    "pages/collection/collection",
+    "pages/payment/payment",
+    "pages/confirm-order/confirm-order",
+    "pages/nickname/nickname",
+    "pages/index-details/index-details",
+    "pages/info/info",
+    "pages/item-details/item-details",
+    "pages/mascot/mascot",
+    "pages/sign/sign",
+    "pages/text/text",
+    "pages/label/label",
+    "pages/form/form",
+    "pages/agreement/agreement",
+    "pages/cost/cost",
+    "pages/locationb/locationb",
+    "pages/huchi/huchi"
   ],
   "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "我的书架",
-    "navigationBarTextStyle": "black"
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#393a3f",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "#FFFFFF"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#0098e8",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "img/home-active.png",
+        "iconPath": "img/home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "img/item-active.png",
+        "iconPath": "img/item.png",
+        "pagePath": "pages/item/item",
+        "text": "附近任务"
+      },
+      {
+        "selectedIconPath": "img/establish-active.png",
+        "iconPath": "img/establish.png",
+        "pagePath": "pages/release/release",
+        "text": "创建任务"
+      },
+      {
+        "selectedIconPath": "img/mascot-active.png",
+        "iconPath": "img/mascot.png",
+        "pagePath": "pages/mascot/mascot",
+        "text": "发现"
+      },
+      {
+        "selectedIconPath": "img/center-active.png",
+        "iconPath": "img/center.png",
+        "pagePath": "pages/center/center",
+        "text": "我的"
+      }
+    ]
   }
 }
