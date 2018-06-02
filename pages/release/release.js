@@ -3,10 +3,14 @@
 //获取应用实例  
 var app = getApp()
 var util = require('../../utils/util.js');
+import utilsModule from '../../utils/activity'
 Page({
   data: {
+    tableID: app.globalData.activityTableId,
+
     hasLocation: false,
     location: null,
+    activity_title:'',//活动名称
     activity_poster: '', //主题海报   
     category_id: 0, //活动标签签一级id
     category_one_id: 0, //活动标二级
@@ -194,7 +198,17 @@ Page({
     }
 
     var data = Object.assign(sedData, e.detail.value)  //组合提交数据
+    //绑定的formSubmit函数体，提交创建一条活动。
     
+    let activity_title_value = e.detail.value.activity_title
+    this.setData({
+      activity_title: activity_title_value
+    })
+    utilsModule.addActivity(this, (res) => {
+      this.setData({
+        createActivityValue: '',
+      })
+    })
 
 
 
